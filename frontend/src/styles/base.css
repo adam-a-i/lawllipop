@@ -1,0 +1,108 @@
+/* Reset height calculations */
+html, body, #root {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #fff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+  width: 100vw; /* Force full viewport width */
+  min-height: 100vh;
+}
+
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px; /* Navbar height */
+  padding-inline: 2rem; /* Add horizontal padding here instead */
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/* Add proper z-index layering */
+.animated-background {
+  z-index: 0;
+}
+
+.sidebar {
+  z-index: 100;
+}
+
+.header {
+  z-index: 10;
+}
+
+.hero-section {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto; /* Center the max-width container */
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  z-index: 2;
+}
+
+.dark .main-content {
+  background-color: #121212;
+}
+
+/* Add a cool gradient background effect */
+.app-container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(69, 226, 125, 0.1),
+    transparent 50%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+.app-container::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 100% 100%,
+    rgba(83, 159, 254, 0.1),
+    transparent 50%
+  );
+  pointer-events: none;
+  z-index: -1;
+} 

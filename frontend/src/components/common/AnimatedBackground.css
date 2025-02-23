@@ -1,0 +1,33 @@
+.animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.matrix-text {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.text-column {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: var(--primary-green);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8rem;
+  opacity: 0.1;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.text-column span {
+  white-space: nowrap;
+} 

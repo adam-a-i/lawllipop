@@ -1,0 +1,47 @@
+.sidebar {
+  width: 250px;
+  background-color: var(--deep-blue);
+  color: var(--primary-white);
+  padding: 2rem;
+  position: fixed;
+  height: 100vh;
+  z-index: 100;
+}
+
+.logo h2 {
+  color: var(--primary-white);
+  margin-bottom: 3rem;
+  font-size: 1.8rem;
+  letter-spacing: -0.5px;
+}
+
+.nav-items {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-items li {
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-items li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(4px);
+}
+
+.nav-items li.active {
+  background-color: rgba(255, 255, 255, 0.15);
+  font-weight: 500;
+}
+
+.nav-icon {
+  font-size: 1.2rem;
+  opacity: 0.9;
+} 

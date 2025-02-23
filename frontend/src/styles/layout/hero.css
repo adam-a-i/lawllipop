@@ -1,0 +1,139 @@
+.hero-section {
+  width: 100%;
+  max-width: 1400px;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  position: relative;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(69, 226, 125, 0.15),
+    transparent 50%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(83, 159, 254, 0.15),
+    transparent 50%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  margin-bottom: 4rem;
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  text-shadow: 0 0 80px rgba(69, 226, 125, 0.3),
+               0 0 32px rgba(83, 159, 254, 0.3);
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #45e27d, #539ffe);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 2rem rgba(69, 226, 125, 0.3));
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Add floating animation to stats cards */
+.stats-card {
+  animation: float 6s ease-in-out infinite;
+}
+
+.stats-card:nth-child(2) {
+  animation-delay: -2s;
+}
+
+.stats-card:nth-child(3) {
+  animation-delay: -4s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Add hover effect */
+.stats-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  transition: all 0.3s ease;
+}
+
+/* Add glow effect on hover */
+.stats-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(45deg, var(--primary-green), var(--light-blue));
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.stats-card:hover::before {
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-stats {
+    grid-template-columns: 1fr;
+  }
+} 
