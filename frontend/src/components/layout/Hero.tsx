@@ -18,18 +18,24 @@ export function Hero() {
           value="4 mins" 
           subtitle="From 300 hours to"
           icon="⚡"
+          numericValue={4}
+          suffix=" mins"
         />
         <StatsCard 
           title="Development Time" 
           value="30 mins" 
           subtitle="From 14-30 days to"
           icon="🚀"
+          numericValue={30}
+          suffix=" mins"
         />
         <StatsCard 
           title="Cost Reduction" 
           value="77%" 
           subtitle="Average savings of"
           icon="💰"
+          numericValue={77}
+          suffix="%"
         />
       </div>
     </div>

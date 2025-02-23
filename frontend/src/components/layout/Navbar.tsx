@@ -19,11 +19,6 @@ export function Navbar() {
           <a href="#" className="nav-item">Generate Contract</a>
           <a href="#" className="nav-item">Settings</a>
         </div>
-
-        <div className="nav-right">
-          <button className="theme-toggle">🌙</button>
-          <div className="avatar">👤</div>
-        </div>
       </div>
     </motion.nav>
   )
